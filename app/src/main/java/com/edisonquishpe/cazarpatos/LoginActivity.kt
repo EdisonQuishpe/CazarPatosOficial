@@ -72,8 +72,7 @@ class LoginActivity : AppCompatActivity() {
         manejadorArchivo.SaveInformation(listadoAGrabar)
         manejadorArchivo = EncriptedSharedPreferencesManager(this)
         manejadorArchivo.SaveInformation(listadoAGrabar)
-        manejadorArchivo = FileInternalManager(this)
-        manejadorArchivo.SaveInformation(listadoAGrabar)
+
 
     }
 
@@ -103,14 +102,6 @@ class LoginActivity : AppCompatActivity() {
         editTextPassword.setText ( listadoLeido.second )
 
 
-        manejadorArchivo = FileInternalManager(this)
-        listadoLeido = manejadorArchivo.ReadInformation()
-
-        if(listadoLeido.first != null){
-            checkBoxRecordarme.isChecked = true
-        }
-        editTextEmail.setText ( listadoLeido.first )
-        editTextPassword.setText ( listadoLeido.second )
 
     }
 
